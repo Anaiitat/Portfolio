@@ -1,15 +1,19 @@
 <script setup>
 import TheHeader from '../components/TheHeader.vue'
+import ThePresentation from '../components/ThePresentation.vue'
 </script>
 
 <template>
   <TheHeader />
   <main>
-   
+    <h1>Portfolio</h1>
+   <ThePresentation />
   </main>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,7 +24,24 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 114px;
+  margin-top: 104px;
+  background-image: url(../assets/particle-lines-futuristic-gradient-background.jpg);
+  background-size: cover;
+}
+
+main>h1{
+  margin-top:20px;
+  color: #ffffff;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 183, 255), 0 0 25px pink;
+  font-size: 80px;
+  border: 1px, solid, rgba(112, 199, 255, 255);
+  padding: 20px 40px 20px 40px;
+  background-color: rgba(240, 248, 255, 0.507);
+  border-radius: 15px 50px 30px;
+  
 }
 
 h1,
