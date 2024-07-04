@@ -1,11 +1,12 @@
 <script setup>
 import TheHeader from '../components/TheHeader.vue'
+import ThePresentation from '../components/ThePresentation.vue'
 </script>
 
 <template>
   <TheHeader />
   <main>
-   
+   <ThePresentation />
   </main>
 </template>
 
@@ -21,6 +22,8 @@ main {
   align-items: center;
   width: 100%;
   margin-top: 114px;
+  background-image: url(../assets/particle-lines-futuristic-gradient-background.jpg);
+  background-size: cover;
 }
 
 h1,
