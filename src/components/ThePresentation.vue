@@ -9,11 +9,11 @@
         end.<br /><br />
         Malgré mon expérience récente, j'ai acquis de solides compétences en
         HTML, CSS,<br />
-        JavaScript et j'ai déjà réalisé plusieurs projets personnels<br />
-        qui me permettent de mettre en avant mes capacités. <br /><br />
+        JavaScript et j'ai déjà réalisé plusieurs projets personnels
+        qui me permettent <br />de mettre en avant mes capacités. <br /><br />
         Dans ce portfolio, vous découvrirez quelques exemples de mes
         réalisations,
-        <br />qui illustrent ma passion pour le développement web
+        <br />qui illustrent ma passion pour le développement web.
       </p>
     </article>
   </section>
@@ -26,13 +26,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(240, 248, 255, 0.445);
+  background-color: rgb(240 248 255 / 67%);
   border-radius: 20px;
 }
 
 .presentation_modif > p {
   text-align: center;
   padding: 40px;
-  color: rgb(161, 88, 161);
+  color:rgb(143 32 145 / 68%)
 }
 </style>
