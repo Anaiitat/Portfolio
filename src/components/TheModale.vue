@@ -1,26 +1,25 @@
 <script setup>
 const props = defineProps({
   reveleModal: Boolean,
-  oneCreation: Object
+  oneCreation: Object,
 });
 </script>
 
-
 <template>
-  <div class="bloc-modale" v-if="reveleModal" >
+  <div class="bloc-modale" v-if="reveleModal">
     <div class="overlay" v-on:click="toggleModale">
       <div class="modale">
-        <button  v-on:click="toggleModale" class="btn-modale btn btn-danger">X</button>
+        <button v-on:click="toggleModale" class="btn-modale btn btn-danger">
+          X
+        </button>
         <h1>{{ oneCreation.name }}</h1>
-        <img />
-
+        <img :src="`./src/assets/${oneCreation.image}.png`" />
         <ul>
-          <li>Date de création</li>
+          <li>{{ oneCreation.date }}</li>
           <li>Description du projet</li>
-          <li>Technologies utilisé</li>
+          <li>{{ oneCreation.technologies }}</li>
           <li>
-            lien pour visiter le site ou le fichier PDF (dans un nouvelle
-            onglet)
+            <a :href="'{oneCreation.link}'">{{ oneCreation.link }}</a>
           </li>
           <li>un lien vers le repository Github</li>
         </ul>
@@ -29,9 +28,19 @@ const props = defineProps({
   </div>
 </template>
 
-
-
 <style scoped>
+h1 {
+  font-weight: bold;
+  margin: 10px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px black;
+  border: 1px, solid, rgba(112, 199, 255, 255);
+  padding: 10px 40px 10px 40px;
+  background:linear-gradient(rgba(112, 199, 255, 255), pink);
+  border-radius: 15px 50px 30px;
+}
+
 .bloc-modale {
   position: fixed;
   top: 0;
@@ -43,6 +52,7 @@ const props = defineProps({
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9998;
 }
 
 .overlay {
@@ -59,14 +69,29 @@ const props = defineProps({
 .modale {
   background: #f1f1f1;
   color: #333;
-  padding: 50px;
-  position: fixed;
-  top: 30%;
-   z-index: 2;
+  padding: 20px 40px 40px 40px;
+  margin: 30px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  border-radius: 20px;
 }
 .btn-modale {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+img{
+    border-radius: 30px;
 }
 </style>

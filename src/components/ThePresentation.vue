@@ -26,13 +26,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(240 248 255 / 67%);
+  background-color: #4d759d45;
   border-radius: 20px;
 }
 
 .presentation_modif > p {
   text-align: center;
   padding: 40px;
-  color:rgb(143 32 145 / 68%)
+  color:rgb(255, 255, 255);
+  text-shadow:1px 1px 2px black ;
+  font-size: 20px;
 }
 </style>
