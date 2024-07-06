@@ -1,17 +1,17 @@
-<script>
-export default {
-  name: "Modale",
-  props: ["revele", "toggleModale","creations"],
-};
+<script setup>
+const props = defineProps({
+  reveleModal: Boolean,
+  oneCreation: Object
+});
 </script>
 
 
 <template>
-  <div class="bloc-modale" v-if="revele" >
+  <div class="bloc-modale" v-if="reveleModal" >
     <div class="overlay" v-on:click="toggleModale">
       <div class="modale">
         <button  v-on:click="toggleModale" class="btn-modale btn btn-danger">X</button>
-        <h1 v-for="creation in creations" :key="creation.id">{{ creation.name }}</h1>
+        <h1>{{ oneCreation.name }}</h1>
         <img />
 
         <ul>

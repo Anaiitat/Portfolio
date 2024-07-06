@@ -1,11 +1,8 @@
-<script>
+<script setup>
 import Modale from "./TheModale.vue";
+import { ref } from 'vue';
 
-export default {
-  name: "Création",
-  data() {
-    return {
-      creations: [
+const creations = [
         { 
           id: 1, 
           name: "CV", 
@@ -30,27 +27,23 @@ export default {
           link:"anaiitat.github.io/Commentaire/",
           description:"",
         },
-      ],
-      revele: false,
-    };
-  },
-  components: {
-    modale: Modale,
-  },
-  methods: {
-    toggleModale: function () {
-      this.revele = !this.revele;
-    },
-  },
-};
+];
+      
+const revele= ref(false);
+const selectedCreation = ref({});
+const toggleModale = (creation) => {
+  revele.value = !revele.value;
+  selectedCreation.value = creation;
+}   
+
 </script>
 
 <template>
   <section id="creation" >
     <h2>Créations</h2>
     <article class="creation_modif" >
-      <modale :revele="revele" :toggleModale="toggleModale"></modale>
-      <div v-for="creation in creations" :key="creation.id" class="miniature" v-on:click="toggleModale">
+      <div v-for="creation in creations" :key="creation.id" class="miniature" v-on:click="toggleModale(creation)">
+        <Modale :reveleModal="revele" :oneCreation="selectedCreation"  />
         <img />
         <h1 >
           {{ creation.name }}
@@ -81,10 +74,10 @@ export default {
   background-color: aliceblue;
 }
 
-.miniature:hover {
+/*.miniature:hover {
   transition: transform 0.2s;
   transform: scale(1.2);
-}
+}*/
 
 
 </style>
