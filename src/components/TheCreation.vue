@@ -97,6 +97,7 @@ h1 {
 
 img:hover {
   transition: transform 0.2s;
+  transform: scale(1.1);
   border: 3px solid rgba(112, 199, 255, 255);
 }
 </style>

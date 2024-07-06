@@ -41,7 +41,7 @@ main>h1{
   font-size: 80px;
   border: 1px, solid, rgba(112, 199, 255, 255);
   padding: 20px 40px 20px 40px;
-  background-color: rgba(240, 248, 255, 0.507);
+  background:linear-gradient(rgba(112, 199, 255, 0.767), rgba(255, 192, 203, 0.767));
   border-radius: 15px 50px 30px;
   
 }
@@ -65,7 +65,7 @@ section {
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  margin: 20px;
+  margin: 30px;
 }
 
 h2 {
@@ -78,6 +78,7 @@ h2 {
   border-radius: 10px;
   margin: 10px;
   padding: 8px;
+  font-weight: bold;
 }
 
 article {
