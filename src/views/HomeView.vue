@@ -72,6 +72,7 @@ h2 {
   color: rgba(112, 199, 255, 255);
   border: 1px, solid, rgba(112, 199, 255, 255);
   background-color: white;
+  font-size: 30px;
   display: flex;
   justify-content: space-evenly;
   width: 250px;
