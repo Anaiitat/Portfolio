@@ -62,6 +62,7 @@ const props = defineProps({
   padding: 50px;
   position: fixed;
   top: 30%;
+   z-index: 2;
 }
 .btn-modale {
   position: absolute;
