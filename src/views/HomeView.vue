@@ -1,6 +1,7 @@
 <script setup>
 import TheHeader from '../components/TheHeader.vue'
 import ThePresentation from '../components/ThePresentation.vue'
+import TheCreation from '../components/TheCreation.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import ThePresentation from '../components/ThePresentation.vue'
   <main>
     <h1>Portfolio</h1>
    <ThePresentation />
+   <TheCreation />
   </main>
 </template>
 
