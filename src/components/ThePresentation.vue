@@ -35,6 +35,6 @@
   padding: 40px;
   color:rgb(255, 255, 255);
   text-shadow:1px 1px 2px black ;
-  font-size: 20px;
+  font-size: 18px;
 }
 </style>

@@ -15,9 +15,9 @@ const props = defineProps({
         <h1>{{ oneCreation.name }}</h1>
         <img :src="`./src/assets/${oneCreation.image}.png`" />
         <ul>
-          <li>{{ oneCreation.date }}</li>
+          <li>Date de création: {{ oneCreation.date }}</li>
           <li>Description du projet</li>
-          <li>{{ oneCreation.technologies }}</li>
+          <li>Développeé avec: {{ oneCreation.technologies }}</li>
           <li>
             <a :href="'{oneCreation.link}'">{{ oneCreation.link }}</a>
           </li>
@@ -32,13 +32,15 @@ const props = defineProps({
 h1 {
   font-weight: bold;
   margin: 10px;
-  font-size: 30px;
+  font-size: 40px;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 2px black;
   border: 1px, solid, rgba(112, 199, 255, 255);
-  padding: 10px 40px 10px 40px;
+  padding: 5px 10px 10px 10px;
   background:linear-gradient(rgba(112, 199, 255, 255), pink);
   border-radius: 15px 50px 30px;
+  writing-mode: vertical-rl;
+  text-align: center;
 }
 
 .bloc-modale {
@@ -69,13 +71,11 @@ h1 {
 .modale {
   background: #f1f1f1;
   color: #333;
-  padding: 20px 40px 40px 40px;
+  padding: 20px ;
   margin: 30px;
   overflow: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 800px;
+  width: 1000px;
   border-radius: 20px;
 }
 .btn-modale {
@@ -85,13 +85,16 @@ h1 {
 }
 
 ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  list-style-type: none;
   margin-top: 20px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 img{
     border-radius: 30px;
+    width: 500px;
+    border: 3px solid rgba(112, 199, 255, 255);
 }
 </style>
