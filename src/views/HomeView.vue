@@ -2,6 +2,7 @@
 import TheHeader from '../components/TheHeader.vue'
 import ThePresentation from '../components/ThePresentation.vue'
 import TheCreation from '../components/TheCreation.vue'
+import TheContact from '../components/TheContact.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import TheCreation from '../components/TheCreation.vue'
     <h1>Portfolio</h1>
    <ThePresentation />
    <TheCreation />
+   <TheContact />
   </main>
 </template>
 
