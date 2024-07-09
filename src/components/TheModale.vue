@@ -15,13 +15,13 @@ const props = defineProps({
         <h1>{{ oneCreation.name }}</h1>
         <img :src="`./src/assets/${oneCreation.image}.png`" />
         <ul>
-          <li>Date de création: {{ oneCreation.date }}</li>
-          <li>Description du projet</li>
-          <li>Développeé avec: {{ oneCreation.technologies }}</li>
-          <li>
-            <a :href="'{oneCreation.link}'">{{ oneCreation.link }}</a>
-          </li>
-          <li>un lien vers le repository Github</li>
+          <li>{{ oneCreation.date }}</li>
+          <li>{{ oneCreation.technologies }}</li>
+          <li class="barre"></li>
+          <li>{{oneCreation.description}}</li>
+          <li class="barre"></li>
+          <li> <a :href="'{oneCreation.link}'">{{ oneCreation.link }}</a> </li>
+          <li><a :href="'{oneCreation.link}'">{{ oneCreation.link2 }}</a></li>
         </ul>
       </div>
     </div>
@@ -37,7 +37,7 @@ h1 {
   text-shadow: 1px 1px 2px black;
   border: 1px, solid, rgba(112, 199, 255, 255);
   padding: 5px 10px 10px 10px;
-  background:linear-gradient(rgba(112, 199, 255, 255), pink);
+  background: linear-gradient(rgba(112, 199, 255, 255), pink);
   border-radius: 15px 50px 30px;
   writing-mode: vertical-rl;
   text-align: center;
@@ -71,7 +71,7 @@ h1 {
 .modale {
   background: #f1f1f1;
   color: #333;
-  padding: 20px ;
+  padding: 20px;
   margin: 30px;
   overflow: auto;
   display: flex;
@@ -88,13 +88,27 @@ ul {
   list-style-type: none;
   margin-top: 20px;
   display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-img{
-    border-radius: 30px;
-    width: 500px;
-    border: 3px solid rgba(112, 199, 255, 255);
+.barre {
+  height: 3px;
+  width: 200px;
+  background: linear-gradient(to right,rgba(112, 199, 255, 255), pink);
+  border-radius: 10px;
+  margin: 30px;
+}
+
+img {
+  border-radius: 30px;
+  width: 500px;
+  border: 3px solid rgba(112, 199, 255, 255);
+}
+
+li{
+  text-align: center;
 }
 </style>

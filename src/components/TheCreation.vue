@@ -10,7 +10,8 @@ const creations = [
     date: "16-04-2024",
     technologies: "HTML - CSS",
     link: "anaiitat.github.io/CV/",
-    description: "",
+    link2:"https://github.com/Anaiitat/CV",
+    description: "L'objectif etait de créer un CV en HTML et CSS en ligne attrayant et accessible sur différents navigateurs.",
   },
   {
     id: 2,
@@ -18,17 +19,18 @@ const creations = [
     image: "cahier_des_charges",
     date: "23-04-2024",
     technologies: "PDF",
-    link: "",
-    description: "",
+    link: "https://github.com/Anaiitat/Cahier-des-charges-",
+    description: "Création du cahier des charges pour la création du site internet de l'entreprise : 'La Socketterie'.",
   },
   {
     id: 3,
-    name: "Dynamisme d'un site",
+    name: "Espace Commentaire",
     image: "commentaire",
     date: "28-05-2024",
     technologies: "Java Script",
     link: "anaiitat.github.io/Commentaire/",
-    description: "",
+    link2:"https://github.com/Anaiitat/Commentaire",
+    description: "L'objectif de ce projet était de créer la partie front-end de l'intégration d'un nouveau commentaire dans un espace commentaire.",
   },
 ];
 
