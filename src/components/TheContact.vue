@@ -18,17 +18,19 @@ function sendEmail() {
   const templateID = import.meta.env.EMAILJS_TEMPLATEID;
   
   // Envoi du mail
-  emailjs.send(serviceID, templateID, templateParams)
-  .then(() => {
+  emailjs
+  .send(serviceID, templateID, templateParams)
+  .then((res) => {
     alert("E-mail envoyé avec succès");
+
     // Vide les champs du formulaire
     this.name = "";
     this.objet = "";
     this.message = "";
-  }),
-    (error) => {
-      console.log("Erreur");
-    };
+  })
+  .catch((error) =>{
+    console.log('error', error)
+  });
 }
 </script>
 
@@ -51,7 +53,7 @@ function sendEmail() {
             <textarea type="text" id="message" v-model="message"></textarea>
           </li>
         </ul>
-        <button type="submit">Envoyer un message</button>
+        <button  type="submit" >Envoyer un message</button>
       </form>
     </article>
   </section>

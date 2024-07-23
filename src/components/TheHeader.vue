@@ -4,7 +4,7 @@
 <template>
     <header>
         <div>
-      <a href='/portfolio/index.html'>
+      <a href='#header'>
         <img src="../assets/network.png" alt="" />
       </a>
     </div>

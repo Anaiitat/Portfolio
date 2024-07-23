@@ -8,7 +8,7 @@ import TheFooter from '../components/TheFooter.vue'
 
 <template>
   <TheHeader />
-  <main>
+  <main id="header">
     <h1>Portfolio</h1>
    <ThePresentation />
    <TheCreation />
@@ -92,7 +92,8 @@ article {
 
 #presentation,
 #creation,
-#contact {
+#contact,
+#header {
   scroll-margin-top: 114px;
 }
 </style>
