@@ -1,30 +1,60 @@
+<script setup>
+import { ref } from "vue";
+import emailjs from "@emailjs/browser";
+
+const name = ref("");
+const objet = ref("");
+const message = ref("");
+
+function sendEmail() {
+  emailjs.init(import.meta.env.EMAILJS_PUBLIC_KEY);
+
+  const templateParams = {
+    objet: this.objet,
+    name: this.name,
+    message: this.message,
+  };
+  const serviceID = import.meta.env.EMAILJS_SERVICEID;
+  const templateID = import.meta.env.EMAILJS_TEMPLATEID;
+  
+  // Envoi du mail
+  emailjs.send(serviceID, templateID, templateParams)
+  .then(() => {
+    alert("E-mail envoyé avec succès");
+    // Vide les champs du formulaire
+    this.name = "";
+    this.objet = "";
+    this.message = "";
+  }),
+    (error) => {
+      console.log("Erreur");
+    };
+}
+</script>
+
 <template>
-    <section id="contact">
-        <h2>Contact</h2>
-        <article>
-          <form>
-            <ul>
-              <li>
-                <label for="name">Nom Prénom: </label>
-                <input type="text" id="name" name="user_name" />
-              </li>
-              <li>
-                <label for="objet">Objet:</label>
-                <input type="text" id="objet" name="user_objet" />
-              </li>
-              <li>
-                <label for="message">Message:</label>
-                <textarea
-                  type="text"
-                  id="message"
-                  name="user_message"
-                ></textarea>
-              </li>
-            </ul>
-            <button>Envoyer un Message</button>
-          </form>
-        </article>
-      </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <article>
+      <form ref="form" @submit.prevent="sendEmail()">
+        <ul>
+          <li>
+            <label for="name">Nom Prénom: </label>
+            <input type="text" id="name" v-model="name" />
+          </li>
+          <li>
+            <label for="objet">Objet:</label>
+            <input type="text" id="objet" v-model="objet" />
+          </li>
+          <li>
+            <label for="message">Message:</label>
+            <textarea type="text" id="message" v-model="message"></textarea>
+          </li>
+        </ul>
+        <button type="submit">Envoyer un message</button>
+      </form>
+    </article>
+  </section>
 </template>
 
 <style scoped>
@@ -48,7 +78,7 @@ form {
   border-radius: 8px;
   padding: 0 25px 0 25px;
   background: white;
-  width: 500px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +108,7 @@ textarea:focus {
 }
 
 textarea {
-  height: 200px;
+  height: 250px;
 }
 
 button {
