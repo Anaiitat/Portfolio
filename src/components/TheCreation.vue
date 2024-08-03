@@ -99,7 +99,6 @@ h1 {
 
 img:hover {
   transition: transform 0.2s;
-  transform: scale(1.1);
-  border: 3px solid rgba(112, 199, 255, 255);
+  box-shadow: 10px 5px 5px rgba(112, 199, 255, 255);
 }
 </style>

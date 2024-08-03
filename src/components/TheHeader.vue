@@ -36,6 +36,8 @@ header {
 h1 {
   font-weight: bold;
   font-size: 30px;
+  
+  
 }
 
 img {
@@ -49,11 +51,12 @@ div {
 nav > a {
   margin: 20px;
   color: rgba(112, 199, 255, 255);
+  text-decoration: none;
 }
 
 nav > a > h1:hover {
   transition: transform 0.2s;
-  transform: scale(1.2);
+  border-bottom: solid 3px rgba(112, 199, 255, 255);
 }
 
 nav {
