@@ -7,15 +7,15 @@ const objet = ref("");
 const message = ref("");
 
 function sendEmail() {
-  emailjs.init(import.meta.env.EMAILJS_PUBLIC_KEY);
+  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
   const templateParams = {
     objet: this.objet,
     name: this.name,
     message: this.message,
   };
-  const serviceID = import.meta.env.EMAILJS_SERVICEID;
-  const templateID = import.meta.env.EMAILJS_TEMPLATEID;
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICEID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
   
   // Envoi du mail
   emailjs
