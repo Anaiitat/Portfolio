@@ -24,7 +24,7 @@
 header{
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 20px;
     align-items: center;
     border-bottom: solid#a0a5db 2px;
     background-color: aliceblue;
@@ -54,4 +54,6 @@ nav>a:hover{
     transition: transform 0.2s;
     border-bottom: solid 3px ;
 }
+
+
 </style>
