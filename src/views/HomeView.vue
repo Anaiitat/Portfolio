@@ -1,6 +1,7 @@
 <script setup>
 import TheHeader  from '../components/TheHeader.vue'
 import ThePresentation from '../components/ThePresentation.vue'
+import TheCreation from'../components/TheCreation.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import ThePresentation from '../components/ThePresentation.vue'
   <main>
     <h1>Portfolio</h1>
     <ThePresentation />
+    <TheCreation />
   </main>
   
 </template>
@@ -31,6 +33,18 @@ main{
     align-items: center;
     background-color: rgba(114, 161, 192, 0.459);
     border-radius: 20px;
+}
+
+h2{
+    font-size: 30px;
+    margin: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: rgba(112, 199, 255, 255);
+    text-shadow:1px 1px 2px rgb(0, 0, 0) ;
+    background-color: rgba(255, 255, 255, 0.863);
+    border: 1px, solid, rgba(112, 199, 255, 255);
+    border-radius: 10px;
 }
 
 
