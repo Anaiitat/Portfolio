@@ -1,24 +1,69 @@
+<script setup>
+import {ref} from "vue";
+import emailjs from "@emailjs/browser";
+
+// Déclaration des variables réactives avec ref
+const name = ref("");
+const objet = ref("");
+const message = ref("");
+
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
+// Fonction pour envoyer l'email
+function sendEmail() {
+
+  // Récupération des paramètres emailjs
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICEID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
+
+  // Création des paramètres du template
+  const templateParams = {
+    objet: objet.value,
+    name: name.value,
+    message: message.value,
+  };
+  
+  // Envoi du mail
+  emailjs
+  .send(serviceID, templateID, templateParams)
+  .then((response) => {
+    alert("E-mail envoyé avec succès");
+
+    // Vide les champs du formulaire
+    name.value = "";
+    objet.value = "";
+    message.value = "";
+  })
+
+  // Affichage de l'erreur
+  .catch((error) => {
+    console.log('Erreur lors de l\'envoi de l\'e-mail :', error);
+  });
+}
+</script>
+
 <template>
     <section id="contact">
         <h2>Contact</h2>
         <article>
-            <form action="">
+            <form ref="form" @submit.prevent="sendEmail">
                 <ul>
                     <li>
                         <label for="name">Nom Prénom:</label>
-                        <input type="text" id="name"/>
+                        <input type="text" id="name" v-model="name" required/>
                     </li>
                     <li>
                         <label for="objet">Objet:</label>
-                        <input type="text" id="objet"/>
+                        <input type="text" id="objet" v-model="objet" required/>
                     </li>
                     <li>
                         <label for="message">Message:</label>
-                        <textarea type="text" id="message"></textarea>
+                        <textarea type="text" id="message" v-model="message" required></textarea>
                     </li>
                 </ul>
+                <button type="submit">Envoyer un message</button>
             </form>
-            <button type="submit">Envoyer un message</button>
+            
         </article>
     </section>
 </template>
@@ -36,10 +81,12 @@ h2{
     border-radius: 10px;
 }
 
+
 #contact > article{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px;
 }
 
 form{
