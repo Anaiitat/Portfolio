@@ -1,4 +1,6 @@
 <script setup>
+import TheModale from'../components/TheModale.vue'
+import {ref} from 'vue';
 
 const creations = [
     {
@@ -31,6 +33,17 @@ const creations = [
         description: "L'objectif de ce projet était de créer la partie front-end de l'intégration d'un nouveau commentaire dans un espace commentaire.",
     },
 ]
+
+const revele = ref(false);
+const selectedCreation = ref({});
+
+//Ouverture ou fermerture de la modale lorsqu'on clique sur une création
+const toggleModale = (creation) => { 
+    revele.value = !revele.value;
+    selectedCreation.value = creation;
+
+}
+
 </script>
 
 
@@ -38,7 +51,8 @@ const creations = [
     <section id="creation">
         <h2>Créations</h2>
         <article>
-            <div v-for="creation in creations" :key="creation.id" >
+            <div v-for="creation in creations" :key="creation.id" v-on:click="toggleModale(creation)">
+                <TheModale :reveleModale="revele" :theCreation="selectedCreation" />
                 <img :src="`./src/assets/${creation.image}.png`"/>
                 <h3>{{ creation.name }}</h3>
             </div>
