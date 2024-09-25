@@ -13,6 +13,18 @@ const props = defineProps({
             <div class="modale">
                 <button v-on:click="toggleModale">X</button>
                 <h3>{{theCreation.name}}</h3>
+                <img :src="`./src/assets/${theCreation.image}.png`">
+                <ul>
+                    <li>{{ theCreation.date }}</li>
+                    <li>{{ theCreation.technologies }}</li>
+                    <li class="barre"></li>
+                    <li>{{ theCreation.description }}</li>
+                    <li class="barre"></li>
+                    <li><a :href="theCreation.link">{{ theCreation.link }}</a></li>
+                    <li><a :href="theCreation.link2">{{ theCreation.link2 }}</a></li>
+
+                </ul>
+                
             </div>
         </div>
     </div>
@@ -60,4 +72,43 @@ const props = defineProps({
     top: 10px;
     right: 10px;
 }
+
+h3 {
+  font-weight: bold;
+  margin: 10px;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px black;
+  border: 1px, solid, rgba(112, 199, 255, 255);
+  padding: 5px 10px 10px 10px;
+  background: linear-gradient(rgba(112, 199, 255, 255), pink);
+  border-radius: 15px 50px 30px;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.barre {
+  height: 3px;
+  width: 200px;
+  background: linear-gradient(to right,rgba(112, 199, 255, 255), pink);
+  border-radius: 10px;
+  margin: 30px;
+}
+
+img {
+  border-radius: 30px;
+  width: 500px;
+  border: 3px solid rgba(112, 199, 255, 255);
+}
+
 </style>
