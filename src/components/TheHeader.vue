@@ -6,14 +6,14 @@
             </a>
         </div>
         <nav>
-            <a>
-                <h1>Présentation</h1>
+            <a href="#presentation">
+                <h1 >Présentation</h1>
             </a>
-            <a>
-                <h1>Créations</h1>
+            <a href="#creation">
+                <h1 >Créations</h1>
             </a>
-            <a>
-                <h1>Contact</h1>
+            <a href="#contact">
+                <h1 >Contact</h1>
             </a>
         </nav>
     </header>
@@ -44,6 +44,7 @@ nav > a{
     margin-right: 70px;
     font-size: 18px;
     color: rgba(112, 199, 255, 255);
+    text-decoration: none;
 }
 
 h1{
