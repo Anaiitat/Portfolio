@@ -24,9 +24,23 @@ main{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 2000px;
   background-image: url(../assets/background.png);
   background-size: cover;
+}
+
+h1{
+  margin-top:20px;
+  color: #ffffff;
+  font-family: Comic Sans MS;
+  font-weight:bold;
+  font-style: normal;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 183, 255), 0 0 25px pink;
+  font-size: 70px;
+  border: 1px, solid, rgba(112, 199, 255, 255);
+  padding: 10px 100px 10px 100px;
+  background:linear-gradient(rgba(112, 199, 255, 0.767), rgba(255, 192, 203, 0.767));
+  border-radius: 15px 50px 30px;
+  
 }
 
 #presentation,
@@ -37,6 +51,7 @@ main{
     align-items: center;
     background-color: rgba(114, 161, 192, 0.459);
     border-radius: 20px;
+    margin: 20px;
 }
 
 h2{
