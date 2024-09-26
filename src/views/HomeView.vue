@@ -3,6 +3,7 @@ import TheHeader  from '../components/TheHeader.vue'
 import ThePresentation from '../components/ThePresentation.vue'
 import TheCreation from'../components/TheCreation.vue'
 import TheContact from '../components/TheContact.vue'
+import TheFooter from '../components/TheFooter.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import TheContact from '../components/TheContact.vue'
     <ThePresentation />
     <TheCreation />
     <TheContact />
+    <TheFooter />
   </main>
   
 </template>
