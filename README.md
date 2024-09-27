@@ -24,7 +24,7 @@ Avant d'installer et de lancer ce projet, assurez-vous d'avoir les éléments su
 ## Installation
 1. Clonez le repository GitHub sur votre machine locale :
    ```bash
-   git clone https://github.com/Anaiitat/Portfolio-2.0.git
+   git clone https://github.com/Anaiitat/Portfolio.git
 
 2. Accédez au répertoire du projet :
     ```bash
