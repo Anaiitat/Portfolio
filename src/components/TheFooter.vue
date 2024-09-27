@@ -1,10 +1,10 @@
 <template>
     <footer>
         <div class="logos">
-            <a href="https://github.com/Anaiitat">
+            <a href="https://github.com/Anaiitat" target="_blank">
                 <img src="../assets/github.png" alt="logo github">
             </a>
-            <a href="https://www.linkedin.com/in/tatiana-arnaud-171343123/">
+            <a href="https://www.linkedin.com/in/tatiana-arnaud-171343123/" target="_blank">
                 <img src="../assets/linkedin.png" alt="logo linkedin">
             </a>
         </div>

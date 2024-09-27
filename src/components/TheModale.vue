@@ -8,26 +8,26 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="bloc-modale" v-if="reveleModale">
-        <div class="overlay" v-on:click="toggleModale">
-            <div class="modale">
-                <button v-on:click="toggleModale">X</button>
-                <h3>{{theCreation.name}}</h3>
-                <img :src="`./src/assets/${theCreation.image}.png`" alt="image du projet">
-                <ul>
-                    <li>{{ theCreation.date }}</li>
-                    <li>{{ theCreation.technologies }}</li>
-                    <li class="barre"></li>
-                    <li>{{ theCreation.description }}</li>
-                    <li class="barre"></li>
-                    <li><a :href="theCreation.link">{{ theCreation.link }}</a></li>
-                    <li><a :href="theCreation.link2">{{ theCreation.link2 }}</a></li>
+  <div class="bloc-modale" v-if="reveleModale">
+    <div class="overlay" v-on:click="toggleModale">
+      <div class="modale">
+        <button v-on:click="toggleModale">X</button>
+        <h3>{{theCreation.name}}</h3>
+        <img :src="`./src/assets/${theCreation.image}.png`" alt="image du projet">
+        <ul>
+          <li>{{ theCreation.date }}</li>
+          <li>{{ theCreation.technologies }}</li>
+          <li class="barre"></li>
+          <li>{{ theCreation.description }}</li>
+          <li class="barre"></li>
+          <li><a :href="theCreation.link" target="_blank">{{ theCreation.link }}</a></li>
+          <li><a :href="theCreation.link2" target="_blank">{{ theCreation.link2 }}</a></li>
 
-                </ul>
-                
-            </div>
-        </div>
+        </ul>
+
+      </div>
     </div>
+  </div>
 </template>
 
 <style scoped>
