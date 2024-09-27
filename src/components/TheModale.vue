@@ -8,26 +8,26 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="bloc-modale" v-if="reveleModale">
-        <div class="overlay" v-on:click="toggleModale">
-            <div class="modale">
-                <button v-on:click="toggleModale">X</button>
-                <h3>{{theCreation.name}}</h3>
-                <img :src="`./src/assets/${theCreation.image}.png`">
-                <ul>
-                    <li>{{ theCreation.date }}</li>
-                    <li>{{ theCreation.technologies }}</li>
-                    <li class="barre"></li>
-                    <li>{{ theCreation.description }}</li>
-                    <li class="barre"></li>
-                    <li><a :href="theCreation.link">{{ theCreation.link }}</a></li>
-                    <li><a :href="theCreation.link2">{{ theCreation.link2 }}</a></li>
+  <div class="bloc-modale" v-if="reveleModale">
+    <div class="overlay" v-on:click="toggleModale">
+      <div class="modale">
+        <button v-on:click="toggleModale">X</button>
+        <h3>{{theCreation.name}}</h3>
+        <img :src="`./src/assets/${theCreation.image}.png`" alt="image du projet">
+        <ul>
+          <li>{{ theCreation.date }}</li>
+          <li>{{ theCreation.technologies }}</li>
+          <li class="barre"></li>
+          <li>{{ theCreation.description }}</li>
+          <li class="barre"></li>
+          <li><a :href="theCreation.link" target="_blank">{{ theCreation.link }}</a></li>
+          <li><a :href="theCreation.link2" target="_blank">{{ theCreation.link2 }}</a></li>
 
-                </ul>
-                
-            </div>
-        </div>
+        </ul>
+
+      </div>
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -63,7 +63,6 @@ const props = defineProps({
   margin: 30px;
   overflow: auto;
   display: flex;
-  width: 1000px;
   border-radius: 20px;
 }
 
@@ -79,7 +78,7 @@ h3 {
   font-size: 40px;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 2px black;
-  border: 1px, solid, rgba(112, 199, 255, 255);
+  border: 1px solid rgba(112, 199, 255, 1);
   padding: 5px 10px 10px 10px;
   background: linear-gradient(rgba(112, 199, 255, 255), pink);
   border-radius: 15px 50px 30px;
@@ -109,6 +108,31 @@ img {
   border-radius: 30px;
   width: 500px;
   border: 3px solid rgba(112, 199, 255, 255);
+}
+
+@media (max-width:768px){
+  .modale{
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+  }
+
+  img{
+    width: 250px;
+  }
+
+  h3{
+    writing-mode: horizontal-tb;
+  }
+
+  li{
+    text-align: center;
+    font-size: 10px;
+  }
+
+  button{
+    margin-right: 50px;
+  }
 }
 
 </style>

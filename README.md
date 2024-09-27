@@ -1,29 +1,56 @@
-# portfolio
+# Portfolio Vue.js
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Description 
+Ce projet est un portfolio personnel développé en Vue.js v3. Il Présente mes compétences et mes projets en développement Web. Le site est responsive et conforme aux standards du w3c pour HTML et CSS.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Customize configuration
+## Fonctionnalités
+- Page d'accueil avec présentation
+- Modal dunamique pour chaque projet, avec détails et technologies utilisées
+- Formulaire de contat fonctionnel
+- Navigation fluide via vue Routeur
+- Page d'erreur 404 
+- Design responsive compatible avec les appareils mobiles
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Prérequis
+Avant d'installer et de lancer ce projet, assurez-vous d'avoir les éléments suivants installés sur votre machine :
+- [Node.js](https://nodejs.org/en/download/) (version 14 ou supérieure)
+- [Vue CLI](https://cli.vuejs.org/) (pour installer Vue.js si nécessaire)
+- [Git](https://git-scm.com/)
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
+## Installation
+1. Clonez le repository GitHub sur votre machine locale :
+   ```bash
+   git clone https://github.com/Anaiitat/Portfolio.git
 
-```sh
-npm run dev
-```
+2. Accédez au répertoire du projet :
+    ```bash
+    cd portfolio
 
-### Compile and Minify for Production
+3. Installez les dépendances du projet avec npm :
+    ```bash
+    npm install
 
-```sh
-npm run build
-```
+4. Pour lancer le projet exécutez la commande suivante :
+    ```bash
+    npm run serve
+
+5. Ouvrez votre navigateur et accédez à l'adresse suivante pour voir le site :
+    http://localhost:5173
+
+
+## Technologies utilisées
+
+* Vue.js v3 : Framework JavaScript pour la construction d'interfaces utilisateur
+* HTML5 / CSS3 : Langages de base pour la structure et le style
+* JavaScript : Langage de programmation
+* Git / GitHub : Versioning du code source
+
+## Auteur
+
+* Nom: ARNAUD Tatiana
+* Email: tatiedu84@gmail.com
+* Github: https://github.com/Anaiitat
