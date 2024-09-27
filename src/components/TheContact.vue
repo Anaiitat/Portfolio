@@ -58,7 +58,7 @@ function sendEmail() {
                     </li>
                     <li>
                         <label for="message">Message:</label>
-                        <textarea type="text" id="message" v-model="message" required></textarea>
+                        <textarea id="message" v-model="message" required></textarea>
                     </li>
                 </ul>
                 <button type="submit">Envoyer un message</button>
@@ -77,7 +77,7 @@ h2{
     color: rgba(112, 199, 255, 255);
     text-shadow:1px 1px 2px rgb(0, 0, 0) ;
     background-color: rgba(255, 255, 255, 0.863);
-    border: 1px, solid, rgba(112, 199, 255, 255);
+    border: 1px solid rgba(112, 199, 255, 1);
     border-radius: 10px;
 }
 
@@ -91,7 +91,7 @@ h2{
 
 form{
     background-color: rgba(255, 255, 255, 0.534);
-    border: 1px, solid, rgba(112, 199, 255, 255);
+    border: 1px solid rgba(112, 199, 255, 1);
     border-radius: 8px;
     display: flex;
     width: 700px;

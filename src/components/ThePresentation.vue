@@ -37,7 +37,7 @@ h2{
     color: rgba(112, 199, 255, 255);
     text-shadow:1px 1px 2px rgb(0, 0, 0) ;
     background-color: rgba(255, 255, 255, 0.863);
-    border: 1px, solid, rgba(112, 199, 255, 255);
+    border: 1px solid rgba(112, 199, 255, 1);
     border-radius: 10px;
 }
 </style>

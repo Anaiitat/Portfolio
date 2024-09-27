@@ -35,7 +35,7 @@ p{
 }
 
 .retour{
-    border: 2px solid rgba(112, 199, 255, 255);
+    border: 2px solid rgba(112, 199, 255, 1);
   background-color: rgba(112, 199, 255, 0.63);
   border-radius: 40px;
   width: 170px;

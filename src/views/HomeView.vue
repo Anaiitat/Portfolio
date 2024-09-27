@@ -36,7 +36,7 @@ h1{
   font-style: normal;
   text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 183, 255), 0 0 25px pink;
   font-size: 70px;
-  border: 1px, solid, rgba(112, 199, 255, 255);
+  border: 1px solid rgba(112, 199, 255, 1);
   padding: 10px 100px 10px 100px;
   background:linear-gradient(rgba(112, 199, 255, 0.767), rgba(255, 192, 203, 0.767));
   border-radius: 15px 50px 30px;
@@ -62,7 +62,7 @@ h2{
     color: rgba(112, 199, 255, 255);
     text-shadow:1px 1px 2px rgb(0, 0, 0) ;
     background-color: rgba(255, 255, 255, 0.863);
-    border: 1px, solid, rgba(112, 199, 255, 255);
+    border: 1px solid rgba(112, 199, 255, 1);
     border-radius: 10px;
 }
 

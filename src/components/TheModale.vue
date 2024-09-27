@@ -13,7 +13,7 @@ const props = defineProps({
             <div class="modale">
                 <button v-on:click="toggleModale">X</button>
                 <h3>{{theCreation.name}}</h3>
-                <img :src="`./src/assets/${theCreation.image}.png`">
+                <img :src="`./src/assets/${theCreation.image}.png`" alt="image du projet">
                 <ul>
                     <li>{{ theCreation.date }}</li>
                     <li>{{ theCreation.technologies }}</li>
@@ -79,7 +79,7 @@ h3 {
   font-size: 40px;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 2px black;
-  border: 1px, solid, rgba(112, 199, 255, 255);
+  border: 1px solid rgba(112, 199, 255, 1);
   padding: 5px 10px 10px 10px;
   background: linear-gradient(rgba(112, 199, 255, 255), pink);
   border-radius: 15px 50px 30px;

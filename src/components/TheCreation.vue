@@ -53,7 +53,7 @@ const toggleModale = (creation) => {
         <article>
             <div v-for="creation in creations" :key="creation.id" v-on:click="toggleModale(creation)">
                 <TheModale :reveleModale="revele" :theCreation="selectedCreation" />
-                <img :src="`./src/assets/${creation.image}.png`"/>
+                <img :src="`./src/assets/${creation.image}.png`" alt="image du projet"/>
                 <h3>{{ creation.name }}</h3>
             </div>
         </article>
@@ -69,7 +69,7 @@ h2{
     color: rgba(112, 199, 255, 255);
     text-shadow:1px 1px 2px rgb(0, 0, 0) ;
     background-color: rgba(255, 255, 255, 0.863);
-    border: 1px, solid, rgba(112, 199, 255, 255);
+    border: 1px solid rgba(112, 199, 255, 1);
     border-radius: 10px;
 }
 

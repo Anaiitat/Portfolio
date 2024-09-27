@@ -2,10 +2,10 @@
     <footer>
         <div class="logos">
             <a href="https://github.com/Anaiitat">
-                <img src="../assets/github.png">
+                <img src="../assets/github.png" alt="logo github">
             </a>
             <a href="https://www.linkedin.com/in/tatiana-arnaud-171343123/">
-                <img src="../assets/linkedin.png">
+                <img src="../assets/linkedin.png" alt="logo linkedin">
             </a>
         </div>
         <div class="date">

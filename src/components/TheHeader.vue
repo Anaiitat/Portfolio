@@ -2,7 +2,7 @@
     <header>
         <div>
             <a>
-                <img src="../assets/logo-t.png"/>
+                <img src="../assets/logo-t.png" alt="logo t"/>
             </a>
         </div>
         <nav>
