@@ -28,7 +28,7 @@ Avant d'installer et de lancer ce projet, assurez-vous d'avoir les éléments su
 
 2. Accédez au répertoire du projet :
     ```bash
-    cd portfolio-vue
+    cd portfolio
 
 3. Installez les dépendances du projet avec npm :
     ```bash
@@ -39,7 +39,7 @@ Avant d'installer et de lancer ce projet, assurez-vous d'avoir les éléments su
     npm run serve
 
 5. Ouvrez votre navigateur et accédez à l'adresse suivante pour voir le site :
-    http://localhost:8080
+    http://localhost:5173
 
 
 ## Technologies utilisées
