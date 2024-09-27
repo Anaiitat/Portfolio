@@ -108,5 +108,12 @@ h3{
     color: white;
 }
 
+@media (max-width:768px){
+  #creation > article{
+    flex-direction: column;
+    
+  }
+
+}
 
 </style>

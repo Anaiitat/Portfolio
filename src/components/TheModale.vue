@@ -63,7 +63,6 @@ const props = defineProps({
   margin: 30px;
   overflow: auto;
   display: flex;
-  width: 1000px;
   border-radius: 20px;
 }
 
@@ -109,6 +108,31 @@ img {
   border-radius: 30px;
   width: 500px;
   border: 3px solid rgba(112, 199, 255, 255);
+}
+
+@media (max-width:768px){
+  .modale{
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+  }
+
+  img{
+    width: 250px;
+  }
+
+  h3{
+    writing-mode: horizontal-tb;
+  }
+
+  li{
+    text-align: center;
+    font-size: 10px;
+  }
+
+  button{
+    margin-right: 50px;
+  }
 }
 
 </style>

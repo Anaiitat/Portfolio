@@ -158,4 +158,15 @@ button:hover {
   transition: transform 0.2s;
   transform: scale(1.1);
 }
+
+@media (max-width:768px){
+  form{
+    width: 100%;
+    margin: 0px 10px 0px 10px;
+  }
+
+  input{
+    width: 250px;
+  }
+}
 </style>

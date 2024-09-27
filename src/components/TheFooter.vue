@@ -15,7 +15,7 @@
 </template>
 
 <style scoped>
-footer{
+footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,7 +26,7 @@ footer{
     position: relative;
 }
 
-.logos{
+.logos {
     display: flex;
     justify-content: center;
     flex: 1;
@@ -36,16 +36,26 @@ footer{
     margin: 0 10px;
 }
 
-.logos > a > img:hover{
+.logos>a>img:hover {
     transition: transform 0.2s;
     transform: scale(1.2);
 }
 
-.date{
+.date {
     white-space: nowrap;
     position: absolute;
     right: 0;
     color: rgba(112, 199, 255, 255);
     margin: 10px;
+}
+
+@media (max-width:768px){
+
+    img{
+        width: 40px
+    }
+    .logos{
+        flex:0;
+    }
 }
 </style>
