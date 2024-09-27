@@ -7,15 +7,16 @@ import TheFooter from '../components/TheFooter.vue'
 </script>
 
 <template>
-  <TheHeader />
-  <main>
-    <h1>Portfolio</h1>
-    <ThePresentation />
-    <TheCreation />
-    <TheContact />
-    <TheFooter />
-  </main>
-  
+  <div>
+    <TheHeader />
+    <main>
+      <h1>Portfolio</h1>
+      <ThePresentation />
+      <TheCreation />
+      <TheContact />
+      <TheFooter />
+    </main>
+  </div>
 </template>
 
 <style scoped>
